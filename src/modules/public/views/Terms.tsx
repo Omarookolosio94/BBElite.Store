@@ -1,16 +1,14 @@
 /* eslint-disable no-template-curly-in-string */
-import { useNavigate } from "react-router-dom";
 import { addMetaData } from "core/helpers/seoHelpers";
 import { Link } from "react-router-dom";
 
 const Terms = () => {
-  const navigate = useNavigate();
 
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Terms and Conditions",
-        description: "Terms and Conditions of usage",
+        title: "Terms and Conditions",
+        description: "Read our terms and conditions to understand our policies and procedures at BB Elite Apparels, including payment terms, shipping, and returns.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">

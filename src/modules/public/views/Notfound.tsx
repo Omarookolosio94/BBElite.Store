@@ -1,17 +1,14 @@
 /* eslint-disable no-template-curly-in-string */
-import { useNavigate } from "react-router-dom";
 import { addMetaData } from "core/helpers/seoHelpers";
 import { Link } from "react-router-dom";
 import { btn } from "core/consts/styling";
 
 const Notfound = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - 404",
-        description: "Page does not exist.",
+        title: "404 Error | Page Not Found",
+        description: "Sorry, the page you're looking for can't be found. Try searching or browse our collection of African-inspired fashion for the modern woman. Free shipping and returns.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">

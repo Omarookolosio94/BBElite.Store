@@ -34,7 +34,7 @@ function FileUpload({
             name={name}
             type="file"
             onChange={onChange}
-            className="text-exs file:text-exs block w-full file:mr-20 file:mr-4 file:rounded-sm file:border-0 file:border-0 file:bg-transparent file:px-3 file:py-0.5 hover:file:bg-blue-100"
+            className="text-exs file:text-exs block w-full file:mr-4 file:rounded-sm file:border-0 file:bg-transparent file:px-3 file:py-0.5 hover:file:bg-blue-100"
           />
 
           <button

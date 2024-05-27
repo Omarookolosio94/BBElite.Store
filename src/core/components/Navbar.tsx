@@ -34,12 +34,12 @@ const Navbar = ({ showLinks = true }: { showLinks?: boolean }) => {
           <Link to="/home" className="flex items-center gap-1">
             <img
               src={logoImg}
-              alt="Seachems.ng"
+              alt="BBElites"
               loading="lazy"
-              className="h-[28px] w-[28px] min-w-[28px]"
+              className="h-[50px] w-[50px] min-w-[28px]"
             />
             <span className="hidden text-[16px] font-[600] lg:block">
-              Ocean Global Chemicals
+              BB Elite Apparels
             </span>
           </Link>
 

@@ -2,13 +2,13 @@
 import { useNavigate } from "react-router-dom";
 import { addMetaData } from "core/helpers/seoHelpers";
 import { Link } from "react-router-dom";
-import { product3 } from "core/consts/images";
 import { formatCurrency } from "core/helpers/generalHelpers";
 import { Delete } from "react-feather";
 import { btn, invoiceGroup } from "core/consts/styling";
 import PlusMinusField from "core/components/formfields/PlusMinusField";
 import useProductStore from "core/services/stores/useProductStore";
 import notification from "core/helpers/notification";
+import { productPlaceholder } from "core/consts/images";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -29,8 +29,9 @@ const Cart = () => {
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Cart",
-        description: "Shop and manage your cart",
+        title: "Shopping Cart",
+        description:
+          "View and edit your shopping cart at BB Elite Apparels. Review your items, update quantities, and apply coupons or discounts before checkout. Secure and easy payment options available.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">
@@ -62,9 +63,18 @@ const Cart = () => {
               >
                 <div
                   className="hover:text-underline flex w-full items-center gap-3 hover:cursor-pointer sm:w-1/4"
-                  onClick={() => navigate(`/products/sasasasasas`)}
+                  onClick={() => navigate(`/products/${item?.productId}`)}
                 >
-                  <img src={product3} alt="" className="w-[32px]" />
+                  <img
+                    src={
+                      item?.product?.gallery!?.length > 0
+                        ? item?.product?.gallery[0]?.url
+                        : productPlaceholder
+                    }
+                    alt={item?.product?.name}
+                    loading="lazy"
+                    className="w-[32px]"
+                  />
                   <p>{item?.product?.name}</p>
                 </div>
 

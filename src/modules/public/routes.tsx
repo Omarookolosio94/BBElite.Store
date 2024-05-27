@@ -1,14 +1,16 @@
-import About from "./views/About";
-import Cart from "./views/Cart";
-import Checkout from "./views/Checkout";
-import Contact from "./views/Contact";
-import Home from "./views/Home";
-import Notfound from "./views/Notfound";
-import Privacy from "./views/Privacy";
-import Products from "./views/Products";
-import SingleProduct from "./views/SingleProduct";
-import Terms from "./views/Terms";
-import TrackOrder from "./views/TrackOrder";
+import React from "react";
+
+const About = React.lazy(() => import("./views/About"));
+const Cart = React.lazy(() => import("./views/Cart"));
+const Checkout = React.lazy(() => import("./views/Checkout"));
+const Contact = React.lazy(() => import("./views/Contact"));
+const Home = React.lazy(() => import("./views/Home"));
+const Notfound = React.lazy(() => import("./views/Notfound"));
+const Privacy = React.lazy(() => import("./views/Privacy"));
+const Products = React.lazy(() => import("./views/Products"));
+const SingleProduct = React.lazy(() => import("./views/SingleProduct"));
+const Terms = React.lazy(() => import("./views/Terms"));
+const TrackOrder = React.lazy(() => import("./views/TrackOrder"));
 
 const routes = [
   {

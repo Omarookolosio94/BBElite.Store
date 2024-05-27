@@ -7,7 +7,7 @@ interface Props {
 const Subheader = (props: Props) => {
   return (
     <section className="mb-[38px]">
-      <p className="mb-2 rounded-[4px] border-l border-l-[14px] border-l-brand px-2 py-[4px] text-[12px] font-[500] text-brand">
+      <p className="mb-2 rounded-[4px] border-l-[14px] border-l-brand px-2 py-[4px] text-[12px] font-[500] text-brand">
         {props?.shortHeader}
       </p>
 

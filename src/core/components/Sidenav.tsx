@@ -12,7 +12,7 @@ const Sidenav = ({
 }) => {
   return (
     <div
-      className={`fixed h-full w-full bg-black transition-all duration-500 ease-in-out ${
+      className={`fixed h-full w-full bg-[#6a2625] transition-all duration-500 ease-in-out ${
         isOpen ? "-left-0" : "-left-[100vw]"
       }`}
       style={{
@@ -67,7 +67,7 @@ const Sidenav = ({
       </nav>
       <div>
         <p className="text-center font-ui-sans text-xs uppercase text-white">
-          &copy; {new Date().getFullYear()} Seachems.ng <br /> All Rights
+          &copy; {new Date().getFullYear()} BBElites.ng <br /> All Rights
           Reserved
         </p>
       </div>

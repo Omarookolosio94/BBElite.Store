@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { addMetaData } from "core/helpers/seoHelpers";
 import { Link } from "react-router-dom";
-import { Mail, Phone } from "react-feather";
+import { Instagram, Mail, Phone } from "react-feather";
 import { useState } from "react";
 import InputField from "core/components/formfields/InputField";
 import TextField from "core/components/formfields/TextField";
@@ -34,9 +34,9 @@ const Contact = () => {
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Contact",
+        title: "Contact Us",
         description:
-          "We are available 24/7 days a week. Call us on +234 090 000 00000, or mail us on oceanglobalchems@gmail.com",
+          "Get in touch with BB Elite Apparels. Contact us for customer support, inquiries, or feedback. We're here to help. Fill out our contact form or reach us through phone or email.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">
@@ -66,7 +66,23 @@ const Contact = () => {
                 <p className="mb-3">We are available 24/7, 7 days a week</p>
 
                 <a href="tel:+" className="hover:underline">
-                  Phone: +234 709 000 0000
+                  Phone: +234 916 468 7217
+                </a>
+              </div>
+
+              <div className="mr-3 w-full border-b border-r border-r-white pb-5 sm:w-1/2 sm:border-b-white sm:border-r-black lg:w-full lg:border-b lg:border-b-black lg:border-r-white lg:pb-5">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="rounded-full bg-brand p-2">
+                    <Instagram className="h-[14px] w-[14px] text-white" />
+                  </div>
+                  <p className="font-[500]">Follow Us Today</p>
+                </div>
+
+                <a
+                  href="https://www.instagram.com/"
+                  className="hover:underline"
+                >
+                  BB Elite Apparels
                 </a>
               </div>
 
@@ -83,10 +99,10 @@ const Contact = () => {
                 </p>
 
                 <a
-                  href="mailto:oceanglobalchems@gmail.com"
+                  href="mailto:Maryjej858@gmail.com"
                   className="hover:underline"
                 >
-                  Email: oceanglobalchems@gmail.com
+                  Email: Maryjej858@gmail.com
                 </a>
               </div>
             </div>

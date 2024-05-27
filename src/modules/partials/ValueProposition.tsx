@@ -27,7 +27,7 @@ const ValueProposition = () => {
             key={prop?.name}
             className="flex w-full sm:w-auto flex-row sm:flex-col items-center justify-center gap-3 py-5 sm:px-3 sm:py-8"
           >
-            <div className="rounded-full border border-[6px] border-shade">
+            <div className="rounded-full border-[6px] border-shade">
               {prop?.icon}
             </div>
             <div className="text-center">

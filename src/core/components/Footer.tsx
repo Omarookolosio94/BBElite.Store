@@ -1,5 +1,4 @@
 import { logoImg } from "core/consts/images";
-import { ArrowUpCircle } from "react-feather";
 import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -7,7 +6,7 @@ const Footer = () => {
     <>
       <footer className="bg-[#111111] text-white">
         <div className="mx-auto w-11/12 pt-[75px] md:w-4/5">
-          <div className="mb-[48px] grid grid-cols-4 grid-cols-5 gap-5">
+          <div className="mb-[48px] grid grid-cols-5 gap-5">
             <div className="col-span-5 text-center md:col-span-2 md:text-start">
               <Link
                 to="/home"
@@ -15,19 +14,19 @@ const Footer = () => {
               >
                 <img
                   src={logoImg}
-                  alt="Seachems.ng"
+                  alt="BB Elite Apparels"
                   loading="lazy"
-                  className="w-[14px]"
+                  className="w-[50px]"
                 />
-                <span className="text-[12px] font-[600] uppercase">
-                  SEACHEMS.NG
+                <span className="text-[12px] font-[600]">
+                  BB Elite Apparels
                 </span>
               </Link>
               <p className="text-[12px]">
-                Seachems NG is a leading wholesale distributor of high-quality
-                chemicals serving diverse industries across Nigeria. We offer a
-                comprehensive range of products, competitive pricing, reliable
-                supply, and expert support to meet your specific needs.
+                BB Elite Apparels is a Nigerian clothing brand based in Lagos,
+                dedicated to providing stylish and trendy outfits for women. Our
+                mission is to empower women to express their individuality
+                through fashion, while promoting African culture and heritage.
               </p>
             </div>
 
@@ -118,25 +117,25 @@ const Footer = () => {
               </h5>
 
               <div className="flex flex-col items-center gap-2 text-[12px] md:items-start md:gap-5">
-                <p>48 Lagos Street Lagos</p>
+                <p>Governor road new plaza shop 10, Lagos</p>
 
                 <a
-                  href="mailto:oceanglobalchems@gmail.com"
+                  href="mailto:Maryjej858@gmail.com"
                   className="hover:underline"
                 >
-                  oceanglobalchems@gmail.com
+                  Maryjej858@gmail.com
                 </a>
 
-                <a href="tel:+" className="hover:underline">
-                  +234 701 900 0000
+                <a href="tel:+2349164687217" className="hover:underline">
+                  +234 916 468 7217
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-t-[.5px] border-t-[#d9d9d9]">
+          <div className="border-t-[.5px] border-t-[#d9d9d9]">
             <div className="mx-auto flex flex-col items-center justify-between gap-3 py-[20px] text-[12px] md:flex-row">
               <p>
-                &copy; 2012 - {new Date().getFullYear()} Seachems.ng. All rights
+                &copy; 2022 - {new Date().getFullYear()} BBElites.ng. All rights
                 reserved.
               </p>
             </div>

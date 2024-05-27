@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { formatCurrency, formatDate } from "core/helpers/generalHelpers";
 import { btn, invoiceGroup } from "core/consts/styling";
-import { product3 } from "core/consts/images";
 import useProductStore from "core/services/stores/useProductStore";
 
 const TrackOrder = () => {
@@ -29,8 +28,10 @@ const TrackOrder = () => {
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Track Order",
-        description: "Track your order from point of purchase to delivery",
+        title:
+          "Track Your BB Elite Apparels Order | Shipping and Delivery Updates",
+        description:
+          "Track your BB Elite Apparels order from shipment to delivery. Enter your order number and email address to receive updates on the status of your package. Fast and reliable shipping across Nigeria and worldwide.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">
@@ -117,7 +118,6 @@ const TrackOrder = () => {
                       className={`${invoiceGroup} !border-none`}
                     >
                       <div className="flex w-2/3 items-center gap-3">
-                        <img src={product3} alt="" className="w-[32px]" />
                         <p>
                           {item?.productName} (x {item?.quantity})
                         </p>

@@ -9,9 +9,9 @@ import { STATES_AND_LGAS } from "core/consts/statesandlgas";
 import { DELIVERY_MODE } from "core/consts/systemconst";
 import { formatCurrency } from "core/helpers/generalHelpers";
 import { btn, invoiceGroup } from "core/consts/styling";
-import { product1, product2, product3 } from "core/consts/images";
 import useProductStore from "core/services/stores/useProductStore";
 import notification from "core/helpers/notification";
+import { productPlaceholder } from "core/consts/images";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -179,8 +179,9 @@ const Checkout = () => {
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Checkout",
-        description: "Easy checkout in less than 2 minutes",
+        title: "Checkout | Secure Payments | Same Day Delivery",
+        description:
+          "Complete your purchase securely at BB Elite Apparels. Enter your payment details and review your order summary before finalizing your checkout. Fast and reliable shipping across Nigeria and worldwide.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">
@@ -374,9 +375,19 @@ const Checkout = () => {
                       className={`${invoiceGroup} !border-none`}
                     >
                       <div className="flex w-2/3 items-center gap-3">
-                        <img src={product3} alt="" className="w-[32px]" />
+                        <img
+                          src={
+                            item?.product?.gallery!?.length > 0
+                              ? item?.product?.gallery[0]?.url
+                              : productPlaceholder
+                          }
+                          alt=""
+                          loading="lazy"
+                          className="w-[32px]"
+                        />
+
                         <p>
-                          {item?.product?.name} (x{item?.quantity})
+                          {item?.product?.name} (x {item?.quantity})
                         </p>
                       </div>
                       <p>

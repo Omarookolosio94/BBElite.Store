@@ -9,8 +9,9 @@ const Privacy = () => {
   return (
     <>
       {addMetaData({
-        title: "Ocean Global Chemicals Nigeria - Privacy",
-        description: "Our privacy policy",
+        title: "Privacy Policy",
+        description:
+          "Read our privacy policy to understand how we collect, use, and protect your personal information at BB Elite Apparels.",
       })}
 
       <div className="m-[0px] mx-auto mb-[34px] h-full w-11/12 overflow-hidden pt-[20px] md:w-4/5">

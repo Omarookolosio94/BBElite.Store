@@ -1,5 +1,5 @@
 import PlusMinusField from "core/components/formfields/PlusMinusField";
-import { product1, product2, product3 } from "core/consts/images";
+import { productPlaceholder } from "core/consts/images";
 import { btn, gallery } from "core/consts/styling";
 import { formatCurrency } from "core/helpers/generalHelpers";
 import useProductStore from "core/services/stores/useProductStore";
@@ -36,7 +36,11 @@ const ProductDetail = ({
   };
 
   useEffect(() => {
-    setDisplayedImg(product1);
+    var img =
+      product?.gallery!?.length > 0
+        ? product?.gallery[0]?.url
+        : productPlaceholder;
+    setDisplayedImg(img);
   }, [product?.id]);
 
   return (
@@ -45,34 +49,29 @@ const ProductDetail = ({
         <section className={`flex flex-col gap-5 sm:flex-row ${boxStyle}`}>
           <div className="flex w-full flex-col-reverse gap-3 sm:w-3/5 sm:flex-row">
             <div className="flex w-full justify-center gap-5 sm:block sm:w-[80px]">
-              <div
-                className={`${gallery}`}
-                onClick={() => setDisplayedImg(product1)}
-              >
-                <img src={product1} alt="" className="h-2/3 w-2/3" />
-              </div>
-              <div
-                className={`${gallery}`}
-                onClick={() => setDisplayedImg(product2)}
-              >
-                <img src={product2} alt="" className="h-2/3 w-2/3" />
-              </div>
-              <div
-                className={`${gallery}`}
-                onClick={() => setDisplayedImg(product3)}
-              >
-                <img src={product3} alt="" className="h-2/3 w-2/3" />
-              </div>
-              <div
-                className={`${gallery} !mb-0`}
-                onClick={() => setDisplayedImg(product1)}
-              >
-                <img src={product1} alt="" className="h-2/3 w-2/3" />
-              </div>
+              {product?.gallery?.length > 0 &&
+                product?.gallery?.map((img) => (
+                  <div
+                    key={img?.id}
+                    className={`${gallery}`}
+                    onClick={() => setDisplayedImg("")}
+                  >
+                    <img
+                      loading="lazy"
+                      src={img?.url}
+                      alt={img?.name}
+                      className="h-2/3 w-2/3"
+                    />
+                  </div>
+                ))}
             </div>
             <div className="flex h-full w-full items-center justify-center rounded-[4px] bg-[#f5f5f5] py-5 sm:py-0">
               <div className="flex h-2/3 w-2/3 items-center justify-center">
-                <img src={displayedImg} alt="" className="" />
+                <img
+                  src={displayedImg}
+                  alt={product?.name}
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -82,13 +81,13 @@ const ProductDetail = ({
               {product?.name}
             </h4>
 
-            <p className="text-[12px] text-[18px] font-[500] text-red-500">
+            <p className="text-[18px] font-[500] text-red-500">
               {formatCurrency(product?.sellingPrice)}
             </p>
 
             <p className="my-3">{product?.description}</p>
 
-            <div className="border-b border-b-[.5px] border-black-shade"></div>
+            <div className="border-b-[.5px] border-black-shade"></div>
 
             <div className="mb-3 mt-2">
               {product?.unit?.length > 0 && (
